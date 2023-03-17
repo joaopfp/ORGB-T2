@@ -9,5 +9,7 @@ Propostas de Algoritmos:
   * Boa localidade temporal devido ao acesso frequente de dados durante o laço. 
   * Má localidade espacial devido ao acesso ao array de duas dimensões de forma não contígua. 
   * Possui muito paralelismo em nível de instrução: A cada iteração, a distância entre dois vértices depende somente de seus vértices intermediários, na prática, a computação de diferentes pares de vértices pode ser calculada de forma independente. 
-
-
+* Dijkstra (Calcula os caminhos mais curtos de um vértice apenas a todos os demais. O grafo é gerado randomicamente em tempo de execução)
+  * Boa localidade temporal, os valores da listas são acessados frequentemente. 
+  * Boa localidade espacial, itera sobre os elementos da matriz de adjacência de maneira sequencial.
+  * Diferentemente do algoritmo anterior, esse não possui muito paralelismo em nível de instrução. Como o algoritmo calcula a distância de um vértice apenas, ele depende do cálculo das distâncias dos vértices anteriores para o cálculo da distância do vértice atual. Logo, essa dependência limita o nível de paralelismo alcançável.
